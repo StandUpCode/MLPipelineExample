@@ -47,7 +47,7 @@ jobs:
           env_vars: |
             REGION='${{ env.REGION }}'
             SERVICE='${{ env.SERVICE }}' 
-            GOOGLE_CLOUD_PROJECT=${{ env.GOOGLE_CLOUD_PROJECT }}
+            GOOGLE_CLOUD_PROJECT="${{ secrets.GCP_PROJECT_ID }}"
             GOOGLE_CLOUD_KEYFILE="${{ secrets.GCP_SA_KEY }}"
 
       - name: Show Output
