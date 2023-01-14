@@ -35,7 +35,7 @@ jobs:
       - name: Build and Push Docker Image
         run: |-
           # Build the container on Cloud Build
-          gcloud builds submit --tag gcr.io/${{ secrets.GCP_PROJECT_ID }}/flash-card-api
+          gcloud builds submit --tag gcr.io/${{ secrets.GCP_PROJECT_ID }}/mlflow-stc
 
       - name: Deploy to Cloud Run
         id: deploy
