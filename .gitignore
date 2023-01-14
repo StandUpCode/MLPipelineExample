@@ -2,7 +2,6 @@ secret/
 .envrc
 .envrc*
 .direnv
-Dockerfile
 README.md
 *.pyc
 *.pyo
