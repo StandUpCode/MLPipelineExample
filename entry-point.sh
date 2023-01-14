@@ -44,4 +44,8 @@ export _MLFLOW_SERVER_ARTIFACT_ROOT="${ARTIFACT_URL}"
 export _MLFLOW_SERVER_FILE_STORE="${DATABASE_URL}"
 
 # Start MLflow and ngingx using supervisor
-exec gunicorn -b "0.0.0.0:8080" -w 4 --log-level debug --access-logfile=- --error-logfile=- --log-level=debug mlflow_auth:app
+exec mlflow server \
+        --host 0.0.0.0 \
+        --port $PORT \
+       
+
