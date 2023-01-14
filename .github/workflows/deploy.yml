@@ -7,7 +7,6 @@ env:
   REGION: "asia-southeast1"
   SERVICE: "mlflow-stc"
   GOOGLE_CLOUD_PROJECT: "${{ secrets.GCP_PROJECT_ID }}"
-  NODE_ENV: "production"
   GOOGLE_CLOUD_KEYFILE: "${{ secrets.GCP_SA_KEY }}"
 
 jobs:
@@ -48,7 +47,6 @@ jobs:
           env_vars: |
             REGION='${{ env.REGION }}'
             SERVICE='${{ env.SERVICE }}' 
-            NODE_ENV=${{ env.NODE_ENV }}
             GOOGLE_CLOUD_PROJECT=${{ env.GOOGLE_CLOUD_PROJECT }}
             GOOGLE_CLOUD_KEYFILE=${{ env.GOOGLE_CLOUD_KEYFILE }}
 
